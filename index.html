@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Palier · Révision plongée du Niveau 1 au Niveau 3 (cours, quiz, examen blanc)</title>
+<meta name="description" content="Palier, l’app iPhone pour réviser la théorie de la plongée : Niveau 1, PE40, Niveau 2, PE60 et Niveau 3. Leçons courtes, quiz corrigés, révisions espacées, examen blanc et Méga Quiz pour les soirées club.">
+<link rel="canonical" href="https://prunob.github.io/palier/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Palier · Révise la théorie de la plongée du N1 au N3">
+<meta property="og:description" content="Leçons courtes, quiz corrigés, révisions espacées, examen blanc et Méga Quiz pour les soirées club. Du Niveau 1 au Niveau 3.">
+<meta property="og:image" content="images/05-accueil.jpg">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" href="images/icone.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Palier · Révision plongée",
+  "operatingSystem": "iOS 26",
+  "applicationCategory": "EducationalApplication",
+  "inLanguage": "fr",
+  "description": "Révision de la théorie de la plongée du Niveau 1 au Niveau 3 : leçons, quiz corrigés, révisions espacées, examen blanc et Méga Quiz.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Palier est-elle une application officielle de la FFESSM ?", "acceptedAnswer": { "@type": "Answer", "text": "Non. Palier est une application indépendante, ni éditée ni validée par la FFESSM. Son contenu suit les manuels de formation technique de la fédération et le Code du sport ; sa relecture par un moniteur est en cours." } },
+    { "@type": "Question", "name": "Quels niveaux de plongée couvre Palier ?", "acceptedAnswer": { "@type": "Answer", "text": "Le Niveau 1 (PE20), le PE40, le Niveau 2 (PA20 et PE40), le PE60 et le Niveau 3 (PA40, PA60 et PE60)." } },
+    { "@type": "Question", "name": "Y a-t-il un examen écrit au Niveau 1 ?", "acceptedAnswer": { "@type": "Answer", "text": "Non : au Niveau 1, le moniteur valide les compétences dans l’eau et vérifie la théorie à l’oral. L’examen blanc de Palier sert à savoir où tu en es." } },
+    { "@type": "Question", "name": "Comment fonctionne le Méga Quiz ?", "acceptedAnswer": { "@type": "Answer", "text": "De 1 à 4 équipes choisissent leur nom, puis jouent 10, 20 ou 30 questions tirées parmi 300, du N1 au N3 et sur la culture plongée. L’animateur affiche la question, puis la réponse, et coche les équipes qui ont trouvé ; l’app tient les scores. En mode télé, tout s’affiche en très grand sur la télé du club (AirPlay). Le Méga Quiz est inclus dans Palier Pro." } },
+    { "@type": "Question", "name": "Palier est-elle gratuite ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui : leçons, quiz, révisions et examen blanc sont gratuits, avec un bandeau publicitaire qui n’apparaît jamais pendant une question. Palier Pro (4,99 €, achat unique) ajoute le Méga Quiz et retire toute publicité." } }
+  ]
+}
+</script>
+<style>
+  :root { --abysse: #0B2545; --lagon: #0E9AA7; --accent: #086570; --ecume: #E6F6F4; --sable: #F6EBD9; --bouee: #FF8A3D; --fond: #F4FAFA; --texte2: #405569; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, sans-serif; color: var(--abysse); background: var(--fond); line-height: 1.6; }
+  h1, h2, h3 { font-family: ui-rounded, "SF Pro Rounded", -apple-system, system-ui, sans-serif; line-height: 1.15; text-wrap: balance; margin: 0 0 .4em; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left)); padding-right: max(20px, env(safe-area-inset-right)); }
+  header { background: linear-gradient(180deg, #2CC3CC, var(--lagon) 45%, var(--abysse)); color: #F2FBFB; }
+  header .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 32px; align-items: center; padding-block: 56px 48px; }
+  header h1 { font-size: clamp(36px, 6vw, 60px); }
+  header p { font-size: 19px; max-width: 34ch; opacity: .95; }
+  .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; margin-bottom: 18px; }
+  .brand img { width: 48px; height: 48px; border-radius: 12px; }
+  .cta { display: inline-block; margin-top: 12px; background: #F2FBFB; color: var(--abysse); padding: 13px 22px; border-radius: 14px; font-weight: 700; text-decoration: none; }
+  .note { font-size: 13px; opacity: .85; margin-top: 14px; }
+  .phone { max-width: 300px; justify-self: center; border-radius: 36px; border: 8px solid #04101E; box-shadow: 0 24px 60px -24px rgba(0,0,0,.6); overflow: hidden; }
+  .phone img { display: block; width: 100%; }
+  section { padding-block: 56px; }
+  section h2 { font-size: clamp(26px, 4vw, 36px); }
+  .lead { color: var(--texte2); max-width: 62ch; font-size: 17px; }
+  .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 28px; }
+  .card { background: #fff; border: 1px solid #D6E8E6; border-radius: 20px; padding: 20px; }
+  .card h3 { font-size: 20px; }
+  .card p { margin: 0; color: var(--texte2); }
+  .levels { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+  .levels span { background: var(--ecume); border-radius: 999px; padding: 6px 14px; font-weight: 600; }
+  .shots { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 28px; }
+  .shots figure { margin: 0; }
+  .shots img { width: 100%; border-radius: 22px; border: 1px solid #D6E8E6; }
+  .shots figcaption { text-align: center; font-weight: 600; margin-top: 8px; }
+  .mega { background: var(--sable); }
+  details { background: #fff; border: 1px solid #D6E8E6; border-radius: 16px; padding: 14px 18px; margin-top: 10px; }
+  summary { font-weight: 700; cursor: pointer; }
+  footer { background: var(--abysse); color: #C9D6DF; font-size: 14px; }
+  footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; }
+  footer a { color: #F2FBFB; }
+  @media (max-width: 760px) {
+    header .wrap { grid-template-columns: 1fr; }
+    .grid, .shots { grid-template-columns: 1fr; }
+    .phone { max-width: 240px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div>
+      <div class="brand"><img src="images/icone.png" alt="" width="48" height="48"> Palier</div>
+      <h1>Révise la théorie de la plongée</h1>
+      <p>Niveau 1, PE40, Niveau 2, PE60 et Niveau 3 : leçons courtes, quiz corrigés, révisions espacées, examen blanc et Méga Quiz pour les soirées club.</p>
+      <a class="cta" href="#niveaux">Bientôt sur l’App Store</a>
+      <p class="note">Application indépendante et non officielle, ni éditée ni validée par la FFESSM.</p>
+    </div>
+    <div class="phone"><img src="images/05-accueil.jpg" alt="Écran d’accueil de Palier : jauge de profondeur à 12 m, série de 5 jours, révisions du jour" width="450" height="978"></div>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <h2>Comment fonctionne Palier</h2>
+      <p class="lead">Chaque niveau est découpé en leçons de 3 à 6 minutes, suivies d’un quiz corrigé de six questions. Les questions ratées reviennent dans tes révisions du jour ; les autres reviennent de plus en plus espacées.</p>
+      <div class="grid">
+        <div class="card"><h3>Des leçons courtes</h3><p>Une idée clé, 4 à 6 cartes, un résumé « À retenir » et des schémas pour la pression, les oreilles et la désaturation.</p></div>
+        <div class="card"><h3>Des quiz qui expliquent</h3><p>La bonne réponse, pourquoi, et la carte à revoir. Les questions clés de sécurité sont repérées et reviennent plus souvent.</p></div>
+        <div class="card"><h3>Ta progression</h3><p>Une jauge qui descend d’un cran à chaque leçon validée, une série de jours, des badges dans ton carnet de plongée.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="niveaux" style="background:#fff">
+    <div class="wrap">
+      <h2>Du Niveau 1 au Niveau 3</h2>
+      <p class="lead">Le contenu suit les manuels de formation technique (Niveau 1 de décembre 2025, Niveau 2 de mai 2026, Niveau 3 de décembre 2025) et le Code du sport en vigueur. Il est rédigé pour l’app ; sa relecture par un moniteur est en cours.</p>
+      <div class="levels"><span>Niveau 1 · PE20</span><span>PE40</span><span>Niveau 2 · PA20 + PE40</span><span>PE60</span><span>Niveau 3 · PA40, PA60 + PE60</span></div>
+      <div class="shots">
+        <figure><img src="images/08-lecon-carte.jpg" alt="Une carte de leçon sur les manœuvres d’équilibrage des oreilles" loading="lazy" width="450" height="978"><figcaption>Des leçons de 3 à 6 minutes</figcaption></figure>
+        <figure><img src="images/10-correction.jpg" alt="Correction d’une question clé avec la bonne réponse et l’explication" loading="lazy" width="450" height="978"><figcaption>Chaque erreur expliquée</figcaption></figure>
+        <figure><img src="images/04-sommaire.jpg" alt="Sommaire des niveaux de Palier" loading="lazy" width="450" height="978"><figcaption>Un sommaire par niveau</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="mega">
+    <div class="wrap" style="display:grid;grid-template-columns:1fr 300px;gap:32px;align-items:center">
+      <div>
+        <h2>Le Méga Quiz, pour les soirées club <small style="font-size:.55em;color:#9A3412">Palier Pro</small></h2>
+        <p class="lead">300 questions du N1 au N3, plus de la culture plongée et du milieu. De 1 à 4 équipes, 10, 20 ou 30 questions, minuteur de 30 s en option. Affiche la question sur la télé du club, révèle la réponse et coche les équipes qui ont trouvé ; l’app tient les scores et affiche le classement. Inclus dans Palier Pro.</p>
+      </div>
+      <div class="phone" style="max-width:260px"><img src="images/16-mega-question.jpg" alt="Une question du Méga Quiz en mode animateur, avec le score des équipes" loading="lazy" width="450" height="978"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Questions fréquentes</h2>
+      <details><summary>Palier est-elle une application officielle de la FFESSM ?</summary><p>Non. Palier est une application indépendante, ni éditée ni validée par la FFESSM. Son contenu suit les manuels de formation de la fédération et le Code du sport ; sa relecture par un moniteur est en cours. Elle ne remplace ni ton moniteur ni la pratique dans l’eau.</p></details>
+      <details><summary>Y a-t-il un examen écrit au Niveau 1 ?</summary><p>Non : au Niveau 1, le moniteur valide les compétences dans l’eau et vérifie la théorie à l’oral. L’examen blanc de Palier sert à savoir où tu en es.</p></details>
+      <details><summary>Faut-il créer un compte ?</summary><p>Non. Ta progression reste sur ton iPhone, sans compte ni serveur.</p></details>
+      <details><summary>Palier est-elle gratuite ?</summary><p>Oui : leçons, quiz, révisions et examen blanc sont gratuits, avec un bandeau publicitaire qui n’apparaît jamais pendant une question. Palier Pro (4,99 €, achat unique) ajoute le Méga Quiz et retire toute publicité.</p></details>
+      <details><summary>Et sur Android ?</summary><p>La version iPhone sort d’abord. Une version Android est prévue ensuite.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Bruno Pennes · Palier, application non officielle</span>
+    <span><a href="confidentialite.html">Confidentialité</a> · <a href="assistance.html">Assistance</a></span>
+  </div>
+</footer>
+</body>
+</html>
