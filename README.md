@@ -18,4 +18,4 @@ Site : https://prunob.github.io/palier/
 
 Pages statiques, sans traceur ni cookie, servies par GitHub Pages depuis la branche `main`.
 
-Contact : bpennes@gmail.com
+Contact : contact@redive.app
